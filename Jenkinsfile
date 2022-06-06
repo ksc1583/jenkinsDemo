@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                build 'gitdemo'
+                build 'gitdemo2'
             }
         }
         stage('Deploy') {
