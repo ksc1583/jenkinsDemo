@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                build 'gitdemo2'
+       
                 echo today
             }
         }
