@@ -1,3 +1,6 @@
+import java.text.SimpleDateFormat
+
+
 pipeline {
     agent{
         label "demoAgent"
@@ -6,11 +9,17 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                 script {
+                    def dateFormat = new SimpleDateFormat("yyyyMMdd")
+                    def date = new Date()
+                
+                    today = dateFormat.format(date) 
             }
         }
         stage('Test') {
             steps {
                 build 'gitdemo2'
+                echo today
             }
         }
         stage('Deploy') {
