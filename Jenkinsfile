@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                build 'gitdemo2'
+                ech 'test'
             }
         }
         stage('Deploy') {
